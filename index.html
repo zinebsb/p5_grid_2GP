@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5_grid</title>
+    <style type="text/css">
+html{
+    height: 100%;
+}
+body{
+    background-color: rgb(255, 213, 149);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(8, 100px);
+    gap: 5px;
+}
+div>div{
+    /*border: 2px solid brown;*/
+    background-color:rgb(235, 178, 114);
+    width: 100%;
+}
+#ojo-L{
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+#ojo-R{
+    grid-column: 9/10;
+    grid-row: 3/4;
+}
+#nariz{
+    grid-column: 6/7;
+    grid-row: 4/6;
+}
+#comisura-L{
+    grid-column: 4/5;
+    grid-row: 6/7;
+}
+#comisura-R{
+    grid-column: 8/9;
+    grid-row: 6/7;
+}
+#boca{
+    grid-column: 5/8;
+    grid-row: 7/8;
+}
+@media(max-width:1100px){
+    body{
+        background-color: rgb(255, 150, 109);
+    }
+    #comisura-L,#comisura-R {
+        grid-row: 7/8;
+    }
+}
+@media (max-width:900px){
+    body{
+        background-color: rgb(176, 230, 255);
+    }
+    #comisura-L, #comisura-R{
+        grid-row: 8/9;
+    }
+    #ojo-L, #ojo-R{
+        grid-row: 4/5;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="ojo-L">ojo-L</div>
+        <div id="ojo-R">ojo-R</div>
+        <div id="nariz">nariz</div>
+        <div id="comisura-L">comisura-L</div>
+        <div id="comisura-R">comisura-R</div>
+        <div id="boca">boca</div>
+      
+    </div>
+</body>
+</html>
